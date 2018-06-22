@@ -1,0 +1,32 @@
+<!--HTML e JavaScript que lista todosas histórias cadastradas-->
+
+<!DOCTYPE html>
+	<html lang="pt-br">
+		<head>
+			<meta charset="utf-8"/>
+			<title>Cadastros das Histórias/title>
+		</head>
+	<body>
+
+		<h1>História Cadastrada</h1>
+
+		<table>
+			
+			<tr>
+				<td>Título</td>
+				<td>Classificação indicativa</td>
+				<td>Sinopse</td>
+				<td>Autor</td>	
+			</tr>
+			<% for(var i = 0; i < historia.length; i++){ %>
+				<tr>
+					<td><%= historia[i].titulo %></td>
+					<td><%= historia[i].class_ind %></td>
+					<td><%= historia[i].sinopse %></td>
+				</tr>
+			<% } %>
+
+		</table>
+
+	</body>
+</html>

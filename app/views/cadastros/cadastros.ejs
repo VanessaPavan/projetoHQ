@@ -1,0 +1,38 @@
+<!--HTML e JavaScript que lista todos os usuários cadastrados-->
+
+<!DOCTYPE html>
+	<html lang="pt-br">
+		<head>
+			<meta charset="utf-8"/>
+			<title>Cadastros dos Usuários</title>
+		</head>
+	<body>
+
+		<h1>Cadastro de todos os usuários</h1>
+
+		<table>
+			
+			<tr>
+				<td>Nome Completo</td>
+				<td>Data de nascimento</td>
+				<td>CPF</td>
+				<td>Pseudonimo</td>
+				<td>E-mail</td>
+				<td>Senha</td>
+				
+			</tr>
+			<% for(var i = 0; i < usuario.length; i++){ %>
+				<tr>
+					<td><%= usuario[i].nome_completo %></td>
+					<td><%= usuario[i].data_nasc %></td>
+					<td><%= usuario[i].cpf %></td>
+					<td><%= usuario[i].pseudonimo %></td>
+					<td><%= usuario[i].email %></td>
+					<td><%= usuario[i].senha %></td>
+				</tr>
+			<% } %>
+
+		</table>
+
+	</body>
+</html>

@@ -1,0 +1,48 @@
+<!--- Formulário de alteração de cadastro de história-->
+
+<!DOCTYPE html>
+	<html lang="pt-br">
+		<head>
+			<meta charset="utf-8"/>
+			<title>Alteração de cadastro de história!</title>
+		</head>
+	<body>
+
+		<h1>Atualizar a história!</h1>
+
+		<form action="/historia/atualizar" method="get">
+			<label>Novo Título:</label>
+			<input type="text" id="NovoTitulo" value="NovoTitulo" name="NovoTitulo">
+			<br />
+			<br />
+			<label>Nova Classificação Indicativa:</label>
+			<br />
+			<br />
+			<select name="nova_class_ind" value="nova_class_ind" size="4">
+  				<option value="L">L</option>
+  				<option value="14">14</option>
+  				<option value="16">16</option>
+  				<option value="18">18</option>
+			</select>
+			<br />
+			<br />
+			<label>Nova Sinopse:</label>
+			<br />
+			<br />
+			<textarea name="nova_sinopse" value="nova_sinopse" rows="10" cols="30">
+			</textarea>
+			<br />
+			<br />
+			<label>Nova Capa:</label>
+            <input type="file" name="nova_capa" id="nova_capa">
+			<br />
+			<br />
+			<br />
+			<br />
+			<input type="submit" value="Atualizar!" />
+			<br />
+			<br />
+			<input type="reset" value="Cancelar"/>
+		</form>
+	</body>
+</html>

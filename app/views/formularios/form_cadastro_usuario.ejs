@@ -1,0 +1,62 @@
+<!-- Formulário de cadastro de usuário-->
+
+<!DOCTYPE html>
+	<html lang="pt-br">
+		<head>
+			<meta charset="utf-8"/>
+			<title>Cadastre-se!</title>
+		</head>
+	<body>
+
+		<h1>Cadastre-se!</h1>
+
+		<% if(validacao) { %>
+			<ul> 
+				<% for(var i=0; i< validacao.length; i++) { %>
+				<li>
+					<%=validacao[i].msg%>
+				</li>
+				<% } %> 
+			</ul
+		<% } %>
+
+		<br />
+		<form action="/cadastro/salvar" method="post">
+			<label>*Nome Completo:</label>
+			<input type="text" id="nome_completo" value="<%=cadastro.nome_completo%>" name="nome_completo">
+			<br />
+			<br />
+			<label>*Pseudônimo:</label>
+			<input type="text" id="pseudonimo" value="<%=cadastro.pseudonimo%>" name="pseudonimo">
+			<br />
+			<br />
+			<label>*Data de Nascimento:</label>
+			<input type="date" id="data_nasc" value="<%=cadastro.data_nasc%>" name="data_nasc">
+			<br />
+			<br />
+			<label>*CPF:</label>
+			 <input type="text" id="cpf" value="<%=cadastro.cpf%>" name="cpf">
+			<br />
+			<br />
+			<label>*E-mail:</label>
+			<input type="email" id="email" value="<%=cadastro.email%>" name="email">
+			<br />
+			<br />
+			<!--<label>Confirmação E-mail:</label>
+			<input type="email" name="email">-->
+			<br />
+			<label>*Senha:</label>
+			<input type="password" id="senha" value="<%=cadastro.senha%>" name="senha">
+			<br />
+			<!--<label>Confirmação Senha:</label>
+			<input type="password" name="senha">-->
+			<br />
+			<!--<input type="checkbox" name="aceiteTermo" value="termo"> Li e aceito os termos..blablabla-->
+			<br />
+			<input type="submit" value="Pronto!" />
+			<br />
+			<br />
+			<input type="reset" value="Cancelar"/>
+		</form>
+	</body>
+</html>
